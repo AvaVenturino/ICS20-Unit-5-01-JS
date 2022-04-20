@@ -8,35 +8,30 @@
  * Check servie worker.
  */
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("/ICS20-Unit-6-01-JS/sw.js", {
-    scope: "/ICS20-Unit-6-01-JS/",
+  navigator.serviceWorker.register("/ICS20-Unit-5-01-JS/sw.js", {
+    scope: "/ICS20-Unit-5-01-JS/",
   });
 }
 
 /**
  * This function calculates the area of a triangle.
  */
-function calculate() {
+function button() {
     // random value generated
     var y = Math.floor(Math.random() * 10 - 3);
-    var guess = 1;
-      
-    document.getElementById("submitguess").{
-      
-   // number guessed by user     
-   var x = document.getElementById("guessField").value;
+    var x = document.getElementById("guessField").value;
+    document.getElementById("submitguess").
   
    if(x == y)
    {    
-       alert("CONGRATULATIONS!!! YOU GUESSED IT RIGHT IN "
-               + guess + " GUESS ");
+       alert("CONGRATULATIONS!!! YOU GUESSED IT RIGHT")
    }
-   else if(x > y) /* if guessed number is greater than actual number*/ 
+   if(x > y) /* if guessed number is greater than actual number*/ 
    {    
        guess++;
-       alert("OOPS SORRY!! TRY A SMALLER NUMBER");
+       alert("OOPS SORRY!! TRY A SMALLER NUMBER")
    }
-   else
+   if(x < y) /* if guessed number is smaller than actual number*/
    {
        guess++;
        alert("OOPS SORRY!! TRY A GREATER NUMBER")
