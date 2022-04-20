@@ -18,8 +18,8 @@ if (navigator.serviceWorker) {
  */
 function button() {
     // random value generated
-    var y = Math.floor(Math.random() * 10 - 3);
-    var x = document.getElementById("guessField").value;
+    var y = Math.floor(Math.random() * 7 + 1);
+    var x = document.getElementById("guessField");
     document.getElementById("submitguess").
   
    if(x == y)
