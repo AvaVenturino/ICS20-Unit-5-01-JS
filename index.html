@@ -8,7 +8,7 @@
     <meta name="author" content="Ava Venturino">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#FFFFFF" />
-    <title>Converting Fahrenheit to Celsius</title>
+    <title>Try to guess the number!</title>
     <link rel="canonical" href="https://AvaVenturino.github.io/ICS20-Unit-5-01-JS/" />
     <link rel="manifest" href="/ICS20-Unit-5-01-JS/manifest.webmanifest" />
     <link rel="stylesheet" href="./css/style.css" /> 
@@ -25,7 +25,7 @@
     <div class = "mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <header class = "mdl-layout__header">
         <div class = "mdl-layout__header-row">      
-          <span class = "mdl-layout-title">Converting Fahrenheit to Celsius</span>
+          <span class = "mdl-layout-title">Try to guess the number!</span>
         </div>
       </header>
       <main class = "mdl-layout__content">
@@ -34,30 +34,25 @@
         <table>
           <tr>
             <th>
-              <h3>Formula</h3>
-              <h4>C= (a°F -32) x 5/9</h4>
+              <p>Try to guess the number being chosen at random</p>
+              <p>To play insert a random number between 1 and 6</p>
             </th>
             <th>
-              <img src="./images/image2vector.svg" align="center" alt="weather circle" width="40%" height="40%" />
+              <img src="./images/image2vector (2).svg" align="center" alt="weather circle" width="50%" height="50%" />
             </th>
           </tr>
         </table>
-        <!-- Numeric Textfield -->
-        <form action="#">
-          <p>Fahrenheit</p>
-          <div class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="fahrenheit">
-            <label class="mdl-textfield__label" for="fahrenheit">Enter Fahrenheit</label>
-            <span class="mdl-textfield__error">Input is not a number!</span>
-          </div>
-        </form>
+        <!-- Default Slider -->
+        <input class="mdl-slider mdl-js-slider" type="range"
+  min="1" max="6" value="1" tabindex="0" for="guessField">
+        
         <!-- Raised button with ripple -->
         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="calculate()">
-          Calculate
+          Button
         </button>
         <br>
         <br>
-          <div id="celsius"></div>
+          <div id="submitguess"></div>
       </main>
     </div>
   </body>

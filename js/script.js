@@ -17,11 +17,28 @@ if (navigator.serviceWorker) {
  * This function calculates the area of a triangle.
  */
 function calculate() {
-  // input
-  const fahrenheit = document.getElementById("fahrenheit").value;
-  // process
-  const celsius = ((fahrenheit - 32) * 5.0) / 9.0;
-  // output
-  document.getElementById("celsius").innerHTML =
-    "The temperature in Celsius is: " + celsius.toFixed(2) + " °C";
+    // random value generated
+    var y = Math.floor(Math.random() * 10 - 3);
+    var guess = 1;
+      
+    document.getElementById("submitguess").{
+      
+   // number guessed by user     
+   var x = document.getElementById("guessField").value;
+  
+   if(x == y)
+   {    
+       alert("CONGRATULATIONS!!! YOU GUESSED IT RIGHT IN "
+               + guess + " GUESS ");
+   }
+   else if(x > y) /* if guessed number is greater than actual number*/ 
+   {    
+       guess++;
+       alert("OOPS SORRY!! TRY A SMALLER NUMBER");
+   }
+   else
+   {
+       guess++;
+       alert("OOPS SORRY!! TRY A GREATER NUMBER")
+   }
 }
