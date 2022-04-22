@@ -14,24 +14,25 @@ if (navigator.serviceWorker) {
 }
 
 /**
- * This function calculates the area of a triangle.
+ * This function updates the slider value.
  */
-function button() {
-  // random value generated
-  var y = Math.floor(Math.random() * 7 + 1)
-  var x = document.getElementById("guessField")
-  document.getElementById("submitguess").if(x == y)
-  {
-    alert("CONGRATULATIONS!!! YOU GUESSED IT RIGHT")
-  }
-  if (x > y) {
-    /* if guessed number is greater than actual number*/
-    guess++
-    alert("OOPS SORRY!! TRY A SMALLER NUMBER")
-  }
-  if (x < y) {
-    /* if guessed number is smaller than actual number*/
-    guess++
-    alert("OOPS SORRY!! TRY A GREATER NUMBER")
-  }
+function updateSliderValue(valueFromSlider) {
+  document.getElementById("slider-value").innerHTML = valueFromSlider
+}
+
+/**
+ * This function displays the slider value.
+ */
+function myButtonClicked() {
+  document.getElementById("random-number").innerHTML = Math.floor(Math.random() * 6) + 1
+}
+
+    // process
+    if (random-number == slider-value) {
+    print("Congratulations!");
+}
+
+    // process
+    if (random-number != slider-value) {
+    print("Try again!");
 }

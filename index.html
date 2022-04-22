@@ -20,39 +20,38 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
   </head>
+  <title>My first Slider</title>
   <body>
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="./js/script.js"></script>
-    <div class = "mdl-layout mdl-js-layout mdl-layout--fixed-header">
-      <header class = "mdl-layout__header">
-        <div class = "mdl-layout__header-row">      
-          <span class = "mdl-layout-title">Try to guess the number!</span>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">Guess the number!</span>
         </div>
       </header>
-      <main class = "mdl-layout__content">
-        <br>
-        <br>
-        <table>
-          <tr>
-            <th>
-              <p>Try to guess the number being chosen at random</p>
-              <p>To play insert a random number between 1 and 6</p>
-            </th>
-            <th>
-              <img src="./images/image2vector (2).svg" align="center" alt="weather circle" width="50%" height="50%" />
-            </th>
-          </tr>
-        </table>
-        <!-- Default Slider -->
-        <input class="mdl-slider mdl-js-slider" type="range"
-  min="1" max="6" value="1" tabindex="0" for="guessField">
-        
+      <main class="mdl-layout__content">
+        <p></p>
+        <div id="slider-value">
+          ?
+        </div>  
+        <!-- Slider with Starting Value -->
+        <label>
+          Slider's Value
+          <input id = "slider" class="mdl-slider mdl-js-slider" type="range"
+          min="1" max="6" value="2" tabindex="0"
+          onchange = "updateSliderValue(this.value)">
+        </label>
         <!-- Raised button with ripple -->
-        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="submitguess">
-          Button
+        <button
+          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+          onclick="slider-value"
+        >
+          Show Value
         </button>
-        <br>
-        <br>
-          <div id="submitguess"></div>
+        <!-- basic text -->
+        <p></p>
+        <div id="random-number"></div>
       </main>
     </div>
   </body>
